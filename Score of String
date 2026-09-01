@@ -1,0 +1,13 @@
+class Solution(object):
+    def scoreOfString(self, s):
+        char = list(s)
+        score = 0
+
+        for i in range (len(char)-1):
+            diff = ord(char[i]) - ord(char[i+1])
+            if diff >= 0:
+                score +=diff
+            else:
+                score -= diff
+        return score
+        
